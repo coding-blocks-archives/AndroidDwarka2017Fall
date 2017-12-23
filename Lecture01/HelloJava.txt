@@ -1,0 +1,194 @@
+class Fruit{
+
+    /**
+    Creating a custom constructor does not allow us to access the 0 arg constructor for the 
+    class and any classes that extend this class
+    Fruit(String name, String color){
+
+    }
+    **/
+
+    satic Integer id = 5;
+
+    String name,color;
+
+    String getName(){
+        return name;
+    }
+
+    String getColor(){
+        return color;
+    }
+
+    //String getOrigin(); //Abstract method
+}
+-------------------------------------
+class Mango extends Fruit{
+
+    /**
+    Mango : 
+    Mango's Color : 
+
+    Apple : 
+    Apple's Color : 
+    **/
+
+    @Override
+    String getName(){
+        return "Mango : " + name;
+    }
+
+    String getOrigin(){
+        return "Nagpur";
+    }
+
+}
+--------------------------------------
+//Singleton Pattern
+class Android{
+    static Android a;
+
+    private Android(){
+
+    }
+
+    static Android getAndroid(){
+        if(a == null){
+        Android a = new Android():
+        }
+        return a;
+    }
+
+}
+
+--------------------------------------
+class Test{
+    public static void main(String[] args){
+        Mango m = new Mango();
+        m.name = "Aam";
+        m.color = "Yellow";
+        m.getName()
+
+        Android a = Android.getAndroid();
+
+        /**
+        Abstract classes internally create an anonymous inner class and return an instance of that class
+        Fruit f = new Fruit(
+
+            getOrigin(){
+
+            }
+        ); 
+        **/
+
+        Fruit.id //Accessing static variables directly 
+        
+        Fruit f = new Fruit(); //Won't work anymore since the 0 arg constructor is missing
+        Fruit f = new Mango(); // Won't work either since it recursively calls 0 arg constructor in parent
+        Mango m = new Mango();
+        Mango m = new Fruit();
+
+        CompletelyAbs a = new CompletelyAbs({
+
+            getName(){
+
+            }
+            getColor(){
+
+            }
+            getOrigin(){
+                
+            }
+        })
+
+    }
+}
+
+--------------------------------------
+
+interface CompletelyAbs {
+
+    int a = 5;
+
+    String getName();
+    Stirng getType();
+    String getOrigin():
+
+}
+
+--------------------------------------
+
+class CompletelyAbsImpl implements CompletelyAbs,CompletelyAbs2{
+
+    //Can implement multiple interfaces but only a single super class
+
+    getName(){
+
+    }
+
+    getColor(){
+
+    }
+
+    getOrigin(){
+                
+    }
+
+}
+
+--------------------------------------
+
+class ExceptionDemo{
+    
+    public static void main(String[] args){
+
+        Mango m;
+
+        try{
+        Int[Integer.valueOf(args[0])] integerArray;
+        }catch(NumberFormatException nfe){
+            System.out.println("Invalid input");
+        }
+
+        try{
+            m.getName();
+        }catch(NullPointerException np){
+            m = new Mango();
+            m.name = "Mango";
+            m.getNmae();
+        }finally{
+            //Always runs
+        }
+
+        try{
+        integerArray[11] = 15;
+        }catch(ArrayIndexOutOfBoundsException e){
+             System.out.println("Array Size exceeded");
+        }
+    }
+
+}
+
+------------------------------------------
+
+<parent
+id = "x"
+name = "Parent" 
+width = 100px
+height 200px>
+
+    <child
+    id = "z"
+    name = "Child"
+    height = 50px
+    width = 30px>
+
+        <SubChild
+        id = "m"
+        name = "SubChild"/>
+
+    </child>
+
+    <child/>
+
+</parent>
