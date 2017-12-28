@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         GridView gridView = findViewById(R.id.listView);
-        StudentAdapter studentAdapter = new StudentAdapter(this, getStudents());
+        KotlinAdapter studentAdapter = new KotlinAdapter(this, getStudents());
         gridView.setNumColumns(2);
         gridView.setAdapter(studentAdapter);
     }
