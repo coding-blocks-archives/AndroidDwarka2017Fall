@@ -87,5 +87,4 @@ public class StudentAdapter extends BaseAdapter {
         });
     }
 
-
 }
