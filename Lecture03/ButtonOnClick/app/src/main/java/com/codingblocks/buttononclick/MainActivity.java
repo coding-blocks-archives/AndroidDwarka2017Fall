@@ -1,5 +1,7 @@
 package com.codingblocks.buttononclick;
 
+import android.Manifest;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+
+        
         Button button = findViewById(R.id.idBtn);
 
 //        button.setOnClickListener(new View.OnClickListener() {

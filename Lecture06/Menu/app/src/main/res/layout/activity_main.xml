@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codingblocks.planets.MainActivity">
+
+    <!--gravity : Defines how the elements are placed in the View/Viewgroup-->
+    <!--layout_gravity : Defines how the element is position according to its parent-->
+    <!--foreground_gravity : Defines the positioning of the foreground placed on a layout (?) -->
+
+    <TextView
+        android:visibility=""
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="48sp" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        app:menu="@menu/navigation"
+        app:itemIconTint="@color/color_yellow"
+        app:itemTextColor="@color/color_yellow"
+        android:background="@color/color_blue"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>

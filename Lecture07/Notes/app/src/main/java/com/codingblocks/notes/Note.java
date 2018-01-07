@@ -14,6 +14,18 @@ public class Note {
         this.isDone = isDone;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDone(Boolean done) {
+        isDone = done;
+    }
+
     public Note(String title) {
         this.title = title;
     }

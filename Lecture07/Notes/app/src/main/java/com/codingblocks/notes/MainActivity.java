@@ -13,7 +13,15 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HandleLongClick{
+
+    @Override
+    public void handleLongClick(int position) {
+        notes.remove(position);
+        //notifyDatasetChanged
+    }
+
+    ArrayList<Note> notes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         RecyclerView recyclerView = findViewById(R.id.rvNotes);
-        final ArrayList<Note> notes = new ArrayList<>();
-        final NotesAdapter notesAdapter = new NotesAdapter(notes);
+
+        notes = new ArrayList<>();
+        final NotesAdapter notesAdapter = new NotesAdapter(notes,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(notesAdapter);
 

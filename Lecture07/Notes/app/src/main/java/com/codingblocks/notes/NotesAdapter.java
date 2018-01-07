@@ -15,9 +15,11 @@ import java.util.ArrayList;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder> {
 
     ArrayList<Note> noteArrayList;
+    HandleLongClick handleLongClick;
 
-    public NotesAdapter(ArrayList<Note> notes) {
+    public NotesAdapter(ArrayList<Note> notes, HandleLongClick handleLongClick) {
         noteArrayList = notes;
+        this.handleLongClick = handleLongClick;
     }
 
     @Override
@@ -26,8 +28,23 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
     }
 
     @Override
-    public void onBindViewHolder(NotesAdapter.NotesHolder holder, int position) {
+    public void onBindViewHolder(final NotesAdapter.NotesHolder holder, int position) {
+        if (noteArrayList.get(position).getDone()){
+            //Striketrhrough
+            //text setting
+        }else{
+            //normal flow
+        }
+
         holder.title.setText(noteArrayList.get(position).getTitle());
+        holder.title.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                noteArrayList.remove(holder.getAdapterPosition());
+                notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -42,6 +59,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
         public NotesHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.titleText);
+            title.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Strikethrough
+                    handleLongClick.handleLongClick(getAdapterPosition());
+//                    noteArrayList.get(getAdapterPosition()).setDone(true);
+                }
+            });
         }
     }
 }
