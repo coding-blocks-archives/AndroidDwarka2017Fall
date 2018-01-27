@@ -1,0 +1,25 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteTopic"
+        android:textSize="26sp"
+        android:layout_marginLeft="40sp"
+        android:textColor="#E64A19"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteStatus"
+        android:textSize="20sp"
+        android:textColor="#5D4037  "
+        android:gravity="end"
+        android:layout_marginRight="15sp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/starysky">
+
+    <Button
+        android:id="@+id/buttonPlanet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Planets"
+        android:textColor="#ffffff"
+        android:background="#E64A19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="140dp"/>
+    <Button
+        android:id="@+id/buttonStars"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Stars"
+        android:textColor="#ffffff"
+        android:background="#E64A19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="200dp"/>
+    <Button
+        android:id="@+id/buttonGalaxy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Galaxies"
+        android:textColor="#ffffff"
+        android:background="#E64A19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="260dp"/>
+</RelativeLayout>

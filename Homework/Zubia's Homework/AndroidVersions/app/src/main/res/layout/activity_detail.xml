@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"> ///here there's not much info so no scrolling needed, but this is how you add it
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:id="@+id/Pic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Pic"
+            android:layout_marginTop="30dp"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Name"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/Version"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Version"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/APIlevel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/APIlevel"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/RelDate"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Button"
+            android:layout_below="@+id/RelDate"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Go To Release Page"
+            />
+
+    </RelativeLayout>
+</ScrollView>
