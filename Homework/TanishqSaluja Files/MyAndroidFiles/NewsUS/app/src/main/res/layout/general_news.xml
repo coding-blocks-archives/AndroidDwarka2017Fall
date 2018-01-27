@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:id="@+id/abcnews"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:text="ABC NEWS"
+    android:textStyle="bold"
+    android:textColor="#000"
+    />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/bbc"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="BBC NEWS"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/br"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Bleacher Report"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/cnn"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="CNN NEWS"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:id="@+id/tg"
+        app:cardCornerRadius="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="The Guardian"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+    </android.support.v7.widget.CardView>
+</LinearLayout>
