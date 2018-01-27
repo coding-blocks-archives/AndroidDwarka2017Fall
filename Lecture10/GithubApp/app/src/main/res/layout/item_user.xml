@@ -18,10 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="11dp"
+        android:maxLines="1"
         android:layout_marginStart="11dp"
         android:layout_toEndOf="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
-        android:text="TextView" />
+        android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView " />
 
     <TextView
         android:id="@+id/tvScore"
