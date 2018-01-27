@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.shah.divyam.movies.MovieDetailActivity">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/Ivory"
+            android:background="@color/purple"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_details"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/tv_title"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:id="@+id/imgv_poster_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@android:mipmap/sym_def_app_icon"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+
+                <TextView
+                    android:id="@+id/tv_favourite"
+                    android:text="Star"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/maroon"/>
+
+                <TextView
+                    android:id="@+id/tv_release_date"
+                    android:text="Date"
+                    android:paddingTop="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorAccent"/>
+                <TextView
+                    android:paddingTop="120dp"
+                    android:id="@+id/tv_rating"
+                    android:text="Rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorCayan"/>
+                <TextView
+                    android:paddingTop="180dp"
+                    android:id="@+id/tv_duration"
+                    android:text="Duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/aqua"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_below="@id/ll_details"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:hint="Here the details will be displayed"
+            android:id="@+id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+    </RelativeLayout>
+
+</ScrollView>
