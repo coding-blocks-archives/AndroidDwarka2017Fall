@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit2"
+        android:layout_alignStart="@+id/edit2"
+        android:layout_alignTop="@+id/bt"
+        android:hint=" # ADD A NEW TASK "
+        android:textColor="#4CAF50"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/recyclerView"
+        android:layout_alignStart="@+id/recyclerView"
+        android:layout_alignTop="@+id/edit1"
+        android:layout_marginTop="50dp"
+        android:hint=" # CURRENT STATUS "
+        android:textColor="#4CAF50"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/container"
+        android:layout_toStartOf="@+id/container"
+        android:text="ADD" />
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/recyclerView"
+        android:id="@+id/container">
+
+    </FrameLayout>
+</RelativeLayout>
