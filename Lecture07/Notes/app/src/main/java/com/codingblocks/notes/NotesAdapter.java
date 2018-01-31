@@ -1,6 +1,7 @@
 package com.codingblocks.notes;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,22 @@ import java.util.ArrayList;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder> {
 
     ArrayList<Note> noteArrayList;
+    ArrayList<Note> noteArrayListCopy;
+
     HandleLongClick handleLongClick;
 
     public NotesAdapter(ArrayList<Note> notes, HandleLongClick handleLongClick) {
         noteArrayList = notes;
+        noteArrayListCopy = new ArrayList<>(noteArrayList); // create a new List that contains all the elements of `list`.
         this.handleLongClick = handleLongClick;
+    }
+    //It seems that we're adding items to the list inside the MainActivity after we
+    //create the adapter which means that we'll have to use some other mechanism for adding
+    // new items so that notesArrayList will contain all the items. Something like:
+
+    public void addItem(Note item){
+        noteArrayList.add(item);
+        noteArrayListCopy.add(item);
     }
 
     @Override
@@ -68,5 +80,22 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
                 }
             });
         }
+    }
+
+    //We here define the filter method which contains our logic for searching
+    public void filter(String text){
+        noteArrayList.clear();
+        if(TextUtils.isEmpty(text)){
+            noteArrayList.addAll(noteArrayListCopy);
+        }
+        else{
+            text=text.toLowerCase();
+            for(Note note:noteArrayListCopy){
+                if(note.getTitle().toLowerCase().contains(text)){
+                    noteArrayList.add(note);
+                }
+            }
+        }
+        notifyDataSetChanged();//we update the data set attached with our Adapter
     }
 }

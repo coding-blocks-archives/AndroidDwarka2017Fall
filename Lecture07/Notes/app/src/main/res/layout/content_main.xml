@@ -14,16 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editTextNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter note here" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
         android:id="@+id/rvNotes"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
 </LinearLayout>
