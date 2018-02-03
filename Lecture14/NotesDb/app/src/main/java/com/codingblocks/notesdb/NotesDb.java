@@ -20,7 +20,7 @@ public class NotesDb extends SQLiteOpenHelper {
 
 
     public static final String DB_NAME = "notesdb";
-    public static final int DB_VERSION = 2;
+    public static final int DB_VERSION = 5;
 
     public NotesDb(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -97,5 +97,17 @@ public class NotesDb extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         //Drop the table
 //        onCreate(sqLiteDatabase);
+        if (i != i1){
+            //Delete the current db
+            //Call onCreate again
+
+            //------------------------------
+
+            //save the new db to a temporary db
+            //Delete the current db
+            //Call onCreate
+            //Save the data from temporary db to the new db
+        }
+
     }
 }
